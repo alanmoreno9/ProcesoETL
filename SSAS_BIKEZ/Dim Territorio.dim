@@ -1,0 +1,99 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ceba1021-0182-4e6a-b5b7-f0fdca6318ec" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Territorio</ID>
+  <Name>Dim Territorio</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f1870190-3677-4500-bd74-003f61b44371">
+    <DataSourceViewID>DW Bike Z</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="5cefcc88-e429-453d-9540-49c6fcc78579">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="8b9621da-c01b-41f5-8e3f-9a7c0ab732cd">
+      <ID>TERRITORIO ID</ID>
+      <Name>TERRITORIO ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d8ea6479-840f-473d-84ce-5a8255cfe70c">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="95dd4a1c-6483-4f18-8ed4-fcacaa6f1cbe">
+            <TableID>dbo_DimTerritorio</TableID>
+            <ColumnID>TERRITORIO_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="544bac25-5728-4dc7-a8a2-a3dcbc37961d">
+          <AttributeID>PAIS ID</AttributeID>
+          <Name>PAIS ID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b28282c3-c042-4723-8285-7fbca3a5d78b">
+      <ID>PAIS ID</ID>
+      <Name>PAIS ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="38fadcb8-7998-4809-bf44-d0f24a2b493b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26f65477-84e0-4316-a3c0-78bc1d3de4c1">
+            <TableID>dbo_DimPais</TableID>
+            <ColumnID>PAIS_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

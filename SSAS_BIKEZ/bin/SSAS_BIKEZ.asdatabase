@@ -1,0 +1,1754 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SSAS_BIKEZ</ID>
+  <Name>SSAS_BIKEZ</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>Fact Venta</ID>
+      <Name>Fact Venta</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>VENTA ID</ID>
+          <Name>VENTA ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_FactVenta</TableID>
+                <ColumnID>VENTA_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>EMPLEADO ID</AttributeID>
+              <Name>EMPLEADO ID</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>FECHA ID</AttributeID>
+              <Name>FECHA ID</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>CLIENTE ID</AttributeID>
+              <Name>CLIENTE ID</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>TERRITORIO ID</AttributeID>
+              <Name>TERRITORIO ID</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>EMPLEADO ID</ID>
+          <Name>EMPLEADO ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_FactVenta</TableID>
+                <ColumnID>EMPLEADO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>FECHA ID</ID>
+          <Name>FECHA ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_FactVenta</TableID>
+                <ColumnID>FECHA_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CLIENTE ID</ID>
+          <Name>CLIENTE ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_FactVenta</TableID>
+                <ColumnID>CLIENTE_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>TERRITORIO ID</ID>
+          <Name>TERRITORIO ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_FactVenta</TableID>
+                <ColumnID>TERRITORIO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Producto</ID>
+      <Name>Dim Producto</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>PRODUCTO ID</ID>
+          <Name>PRODUCTO ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimProducto</TableID>
+                <ColumnID>PRODUCTO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>CATEGORIA ID</AttributeID>
+              <Name>CATEGORIA ID</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>CATEGORIA ID</ID>
+          <Name>CATEGORIA ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimCategoria</TableID>
+                <ColumnID>CATEGORIA_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Empleado</ID>
+      <Name>Dim Empleado</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>EMPLEADO ID</ID>
+          <Name>EMPLEADO ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimEmpleado</TableID>
+                <ColumnID>EMPLEADO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>TERRITORIO ID</AttributeID>
+              <Name>TERRITORIO ID</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>TERRITORIO ID</ID>
+          <Name>TERRITORIO ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimEmpleado</TableID>
+                <ColumnID>TERRITORIO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Fecha</ID>
+      <Name>Dim Fecha</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>FECHA ID</ID>
+          <Name>FECHA ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimFecha</TableID>
+                <ColumnID>FECHA_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Cliente</ID>
+      <Name>Dim Cliente</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>CLIENTE ID</ID>
+          <Name>CLIENTE ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimCliente</TableID>
+                <ColumnID>CLIENTE_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Dim Territorio</ID>
+      <Name>Dim Territorio</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>TERRITORIO ID</ID>
+          <Name>TERRITORIO ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimTerritorio</TableID>
+                <ColumnID>TERRITORIO_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>PAIS ID</AttributeID>
+              <Name>PAIS ID</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PAIS ID</ID>
+          <Name>PAIS ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimPais</TableID>
+                <ColumnID>PAIS_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>DW Bike Z</ID>
+      <Name>DW Bike Z</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="19" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-86" scrolltop="-45" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22479" y="16320" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactVenta" left="11741" top="7691" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4572" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000dc1100003b0d0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_FactVenta" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimFecha" left="12527" top="13478" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimFecha" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimProducto" left="20" top="6327" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3217" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000910c000003090000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimProducto" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimEmpleado" left="6211" top="0" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4509" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00009d110000a30e0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimEmpleado" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactDetalle" left="5637" top="6147" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3704" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000780e00006b0a0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_FactDetalle" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimTerritorio" left="13120" top="900" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3323" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000fb0c00009b070000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimTerritorio" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimPais" left="18843" top="1079" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimPais" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimCliente" left="18713" top="8411" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b070000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimCliente" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimCategoria" left="20" top="11034" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3217" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000910c000034060000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimCategoria" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8066" top="3248" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="5161" height="4743" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactVenta_DimEmpleado]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="7" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="8465" y="3747" />
+                  <point x="8465" y="5719" />
+                  <point x="12927" y="5719" />
+                  <point x="12927" y="7691" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="13628" top="10778" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactVenta_DimFecha]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="14027" y="13478" />
+                  <point x="14027" y="11078" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="16013" top="8985" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactVenta_DimCliente]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="12" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="18713" y="9384" />
+                  <point x="16313" y="9384" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="14277" top="2348" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="904" height="5643" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactVenta_DimTerritorio]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="5" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="14781" y="2847" />
+                  <point x="14781" y="5269" />
+                  <point x="14577" y="5269" />
+                  <point x="14577" y="7691" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9041" top="7180" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="3000" height="2604" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactDetalle_FactVenta]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="18" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="11741" y="9384" />
+                  <point x="10541" y="9384" />
+                  <point x="10541" y="7480" />
+                  <point x="9341" y="7480" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1229" top="8334" logicalid="15" controlid="15" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_DimProducto_DimCategoria]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="3" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="1628" y="11034" />
+                  <point x="1628" y="8634" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2937" top="7081" logicalid="16" controlid="16" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_FactDetalle_DimProducto]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="13" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="3237" y="7480" />
+                  <point x="5637" y="7480" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="10420" top="1474" logicalid="17" controlid="17" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_DimEmpleado_DimTerritorio]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="12" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="13120" y="1873" />
+                  <point x="10720" y="1873" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="16143" top="1474" logicalid="18" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[FK_DimTerritorio_DimPais]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="6" sourceattachpoint="12" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="18843" y="1873" />
+                  <point x="16443" y="1873" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-86</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-45</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>Fact Venta</ID>
+          <Name>Fact Venta</Name>
+          <DimensionID>Fact Venta</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>VENTA ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>EMPLEADO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>FECHA ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CLIENTE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Producto</ID>
+          <Name>Dim Producto</Name>
+          <DimensionID>Dim Producto</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PRODUCTO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>CATEGORIA ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Empleado</ID>
+          <Name>Dim Empleado</Name>
+          <DimensionID>Dim Empleado</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>EMPLEADO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Fecha</ID>
+          <Name>Dim Fecha</Name>
+          <DimensionID>Dim Fecha</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>FECHA ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Cliente</ID>
+          <Name>Dim Cliente</Name>
+          <DimensionID>Dim Cliente</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>CLIENTE ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Territorio</ID>
+          <Name>Dim Territorio</Name>
+          <DimensionID>Dim Territorio</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PAIS ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Fact Venta - EMPLEADO - TERRITORIO</ID>
+          <Name>Fact Venta - EMPLEADO - TERRITORIO</Name>
+          <DimensionID>Dim Territorio</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PAIS ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Fact Venta - TERRITORIO</ID>
+          <Name>Fact Venta - TERRITORIO</Name>
+          <DimensionID>Dim Territorio</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PAIS ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Dim Empleado - TERRITORIO</ID>
+          <Name>Dim Empleado - TERRITORIO</Name>
+          <DimensionID>Dim Territorio</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>TERRITORIO ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PAIS ID</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>Fact Detalle</ID>
+          <Name>Fact Detalle</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>CANTIDAD</ID>
+              <Name>CANTIDAD</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FactDetalle</TableID>
+                  <ColumnID>CANTIDAD</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>PRECIO UNITARIO</ID>
+              <Name>PRECIO UNITARIO</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FactDetalle</TableID>
+                  <ColumnID>PRECIO_UNITARIO</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Recuento Fact Detalle</ID>
+              <Name>Recuento Fact Detalle</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FactDetalle</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Fact Venta</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>VENTA ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactDetalle</TableID>
+                        <ColumnID>VENTA_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Producto</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PRODUCTO ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactDetalle</TableID>
+                        <ColumnID>PRODUCTO_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Dim Empleado</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>EMPLEADO ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Fact Venta</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>EMPLEADO ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Fact Venta - EMPLEADO - TERRITORIO</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>TERRITORIO ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Dim Empleado</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>TERRITORIO ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Dim Fecha</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>FECHA ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Fact Venta</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>FECHA ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Dim Cliente</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>CLIENTE ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Fact Venta</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>CLIENTE ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Fact Venta - TERRITORIO</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>TERRITORIO ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Fact Venta</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>TERRITORIO ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Fact Detalle</ID>
+              <Name>Fact Detalle</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>DW Bike Z</DataSourceViewID>
+                <TableID>dbo_FactDetalle</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+        <MeasureGroup>
+          <ID>Fact Venta</ID>
+          <Name>Fact Venta</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>TOTAL VENTA</ID>
+              <Name>TOTAL VENTA</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FactVenta</TableID>
+                  <ColumnID>TOTAL_VENTA</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>CANTIDAD PRODUCTOS</ID>
+              <Name>CANTIDAD PRODUCTOS</Name>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FactVenta</TableID>
+                  <ColumnID>CANTIDAD_PRODUCTOS</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Recuento Fact Venta</ID>
+              <Name>Recuento Fact Venta</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FactVenta</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="DegenerateMeasureGroupDimension">
+              <CubeDimensionID>Fact Venta</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>VENTA ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactVenta</TableID>
+                        <ColumnID>VENTA_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Empleado</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>EMPLEADO ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactVenta</TableID>
+                        <ColumnID>EMPLEADO_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Fecha</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>FECHA ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactVenta</TableID>
+                        <ColumnID>FECHA_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Cliente</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>CLIENTE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactVenta</TableID>
+                        <ColumnID>CLIENTE_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Territorio</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>TERRITORIO ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FactVenta</TableID>
+                        <ColumnID>TERRITORIO_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="ReferenceMeasureGroupDimension">
+              <CubeDimensionID>Dim Empleado - TERRITORIO</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>TERRITORIO ID</AttributeID>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+              <IntermediateCubeDimensionID>Dim Empleado</IntermediateCubeDimensionID>
+              <IntermediateGranularityAttributeID>TERRITORIO ID</IntermediateGranularityAttributeID>
+              <Materialization>Regular</Materialization>
+              <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Fact Venta</ID>
+              <Name>Fact Venta</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>DW Bike Z</DataSourceViewID>
+                <TableID>dbo_FactVenta</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>DW Bike Z</DataSourceViewID>
+      </Source>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>DW Bike Z</ID>
+      <Name>DW Bike Z</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLOLEDB.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=DW_BikeZ</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+        <Account>sa</Account>
+        <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>DW Bike Z</ID>
+      <Name>DW Bike Z</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+          <Value></Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout />
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>0</DiagramViewPortLeft>
+                <DiagramViewPortTop>0</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>DW Bike Z</DataSourceID>
+      <Schema>
+        <xs:schema id="DW_x0020_Bike_x0020_Z" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="DW_x0020_Bike_x0020_Z" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3f1f7bbd-a313-4cf7-a091-951be936b015">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_DimAlmacen" msprop:design-time-name="53117b2f-4273-4e5b-8fa8-deb591ef07c8" msprop:FriendlyName="DimAlmacen" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimAlmacen">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ALMACEN_ID" msprop:FriendlyName="ALMACEN_ID" msprop:DbColumnName="ALMACEN_ID" msprop:design-time-name="303d1aab-a98c-44d8-b63f-b39c942d2896" type="xs:int" />
+                      <xs:element name="ALMACEN" msprop:FriendlyName="ALMACEN" msprop:DbColumnName="ALMACEN" msprop:design-time-name="3b7d0c83-6197-484d-a8cf-6a5377cab0e7">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="TERRITORIO_ID" msprop:FriendlyName="TERRITORIO_ID" msprop:DbColumnName="TERRITORIO_ID" msprop:design-time-name="4b06efd8-446a-4e15-8993-7c9b8962bb63" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimCategoria" msprop:design-time-name="cb036f44-3b6b-4d9c-927f-4686b252d785" msprop:FriendlyName="DimCategoria" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimCategoria">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CATEGORIA_ID" msprop:FriendlyName="CATEGORIA_ID" msprop:DbColumnName="CATEGORIA_ID" msprop:design-time-name="add6a4fe-2d73-4a10-82b1-5b790d2cb4e4" type="xs:int" />
+                      <xs:element name="CATEGORIA" msprop:FriendlyName="CATEGORIA" msprop:DbColumnName="CATEGORIA" msprop:design-time-name="868b3c32-b63e-41cb-9ff6-a7fba44c672c">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimCliente" msprop:design-time-name="9ea8c5f0-7cca-4bc4-a3fe-27f96b61d57d" msprop:FriendlyName="DimCliente" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimCliente">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CLIENTE_ID" msprop:FriendlyName="CLIENTE_ID" msprop:DbColumnName="CLIENTE_ID" msprop:design-time-name="bb803eea-55b1-4e84-827c-f06e757b71b3" type="xs:int" />
+                      <xs:element name="NOMBRE" msprop:FriendlyName="NOMBRE" msprop:DbColumnName="NOMBRE" msprop:design-time-name="5ba657d9-252a-4bc5-80df-eb333ce88ab6" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="APELLIDO" msprop:FriendlyName="APELLIDO" msprop:DbColumnName="APELLIDO" msprop:design-time-name="6814973b-3fac-417a-95ad-d14090797421" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimEmpleado" msprop:design-time-name="6abc3f2e-4530-4964-868f-a92a302505ae" msprop:FriendlyName="DimEmpleado" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimEmpleado">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="EMPLEADO_ID" msprop:FriendlyName="EMPLEADO_ID" msprop:DbColumnName="EMPLEADO_ID" msprop:design-time-name="570210f1-b513-4ece-877e-24afcf867ee6" type="xs:int" />
+                      <xs:element name="CARGO" msprop:FriendlyName="CARGO" msprop:DbColumnName="CARGO" msprop:design-time-name="e62f7d99-a3ec-4bba-be8b-bcca6bb90eb3">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="FECHA_NACIMIENTO" msprop:FriendlyName="FECHA_NACIMIENTO" msprop:DbColumnName="FECHA_NACIMIENTO" msprop:design-time-name="b91cc7ba-2a49-4d2c-836b-8586fea2f15f">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ESTADO_CIVIL" msprop:FriendlyName="ESTADO_CIVIL" msprop:DbColumnName="ESTADO_CIVIL" msprop:design-time-name="f2b62a7d-8b84-4ccd-83a0-63761c776fa4">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="GENERO" msprop:FriendlyName="GENERO" msprop:DbColumnName="GENERO" msprop:design-time-name="6f791402-b03d-4cee-9826-0a44ea7a7b6c">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="1" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="FECHA_CONTRATACION" msprop:FriendlyName="FECHA_CONTRATACION" msprop:DbColumnName="FECHA_CONTRATACION" msprop:design-time-name="f4ff6b87-f708-4ac0-ab07-180cca3e1b29">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="HORAS_VACACIONES" msprop:FriendlyName="HORAS_VACACIONES" msprop:DbColumnName="HORAS_VACACIONES" msprop:design-time-name="51d0545e-6dfb-489a-86f7-f8139b0a26dc" type="xs:short" />
+                      <xs:element name="TERRITORIO_ID" msprop:FriendlyName="TERRITORIO_ID" msprop:DbColumnName="TERRITORIO_ID" msprop:design-time-name="6671c33f-0ae6-4d79-9740-05d7d4d7fe2d" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimFecha" msprop:design-time-name="7d911fe0-368b-44b0-9dfd-4f65aacbd0f4" msprop:FriendlyName="DimFecha" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimFecha">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="FECHA_ID" msprop:FriendlyName="FECHA_ID" msprop:DbColumnName="FECHA_ID" msprop:design-time-name="cdedd02e-d23a-4a28-9d87-d20ae00e25a1" type="xs:int" />
+                      <xs:element name="ANIO" msprop:FriendlyName="ANIO" msprop:DbColumnName="ANIO" msprop:design-time-name="9311be61-a138-48ad-805a-6626987276a7" type="xs:int" />
+                      <xs:element name="MES" msprop:FriendlyName="MES" msprop:DbColumnName="MES" msprop:design-time-name="c44a7295-accc-4109-8eda-3ce6a033170e" type="xs:int" />
+                      <xs:element name="DIA" msprop:FriendlyName="DIA" msprop:DbColumnName="DIA" msprop:design-time-name="ad0e82e3-a890-4ff0-a3ee-c55f3be7849b" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimPais" msprop:design-time-name="b79cf682-123c-4024-841c-11fd6135983c" msprop:FriendlyName="DimPais" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimPais">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="PAIS_ID" msprop:FriendlyName="PAIS_ID" msprop:DbColumnName="PAIS_ID" msprop:design-time-name="c4052227-4575-49bc-bbdc-ea02f40f5709">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="PAIS" msprop:FriendlyName="PAIS" msprop:DbColumnName="PAIS" msprop:design-time-name="6d8789c1-7c5f-409c-a72b-1f35fc28280c">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimProducto" msprop:design-time-name="47e387df-a48d-4620-bd5d-1517253c9287" msprop:FriendlyName="DimProducto" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimProducto">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="PRODUCTO_ID" msprop:FriendlyName="PRODUCTO_ID" msprop:DbColumnName="PRODUCTO_ID" msprop:design-time-name="44f6ba38-068f-49ff-9318-a32c9c61362b" type="xs:int" />
+                      <xs:element name="PRODUCTO" msprop:FriendlyName="PRODUCTO" msprop:DbColumnName="PRODUCTO" msprop:design-time-name="2d801ff5-a855-4f2d-b5d4-62f06d2da96f">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="COLOR" msprop:FriendlyName="COLOR" msprop:DbColumnName="COLOR" msprop:design-time-name="d96f34a1-bcc9-4add-ae23-162003ae4841" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CATEGORIA_ID" msprop:FriendlyName="CATEGORIA_ID" msprop:DbColumnName="CATEGORIA_ID" msprop:design-time-name="122d948b-2cc6-44ad-87e2-33be742cb9cb" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DimTerritorio" msprop:design-time-name="f0c8e706-c5dd-4ff8-9ffe-13bb5a925672" msprop:FriendlyName="DimTerritorio" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DimTerritorio">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="TERRITORIO_ID" msprop:FriendlyName="TERRITORIO_ID" msprop:DbColumnName="TERRITORIO_ID" msprop:design-time-name="b6005217-b1f3-491e-b958-0d3786afebbb" type="xs:int" />
+                      <xs:element name="TERRITORIO" msprop:FriendlyName="TERRITORIO" msprop:DbColumnName="TERRITORIO" msprop:design-time-name="75b26066-b3f1-4bca-b20b-6626f0889d56">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="PAIS_ID" msprop:FriendlyName="PAIS_ID" msprop:DbColumnName="PAIS_ID" msprop:design-time-name="471fb524-0420-4554-89f0-1fdb201defad">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_FactDetalle" msprop:design-time-name="52f73bc6-acba-4a22-afd7-bf7ed4113173" msprop:FriendlyName="FactDetalle" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="FactDetalle">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ID_DETALLE" msprop:FriendlyName="ID_DETALLE" msprop:DbColumnName="ID_DETALLE" msprop:design-time-name="d788ba50-3ded-4ed8-82f7-cd2fa880c6cc" type="xs:int" />
+                      <xs:element name="PRODUCTO_ID" msprop:FriendlyName="PRODUCTO_ID" msprop:DbColumnName="PRODUCTO_ID" msprop:design-time-name="97ff1f54-2aef-4529-ba9a-c12068758fe5" type="xs:int" />
+                      <xs:element name="CANTIDAD" msprop:FriendlyName="CANTIDAD" msprop:DbColumnName="CANTIDAD" msprop:design-time-name="1f27536a-9506-4f1a-b1d7-2a91b4d0e57a" type="xs:int" />
+                      <xs:element name="VENTA_ID" msprop:FriendlyName="VENTA_ID" msprop:DbColumnName="VENTA_ID" msprop:design-time-name="e7939ff1-d49f-4f10-9c04-9d1d724695f1" type="xs:int" />
+                      <xs:element name="PRECIO_UNITARIO" msprop:FriendlyName="PRECIO_UNITARIO" msprop:DbColumnName="PRECIO_UNITARIO" msprop:design-time-name="fdc2b774-89e1-446c-8c2c-30a74996a3ee" type="xs:decimal" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_FactVenta" msprop:design-time-name="22e04128-b76c-4423-9a27-4307c9d6df37" msprop:FriendlyName="FactVenta" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="FactVenta">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="VENTA_ID" msprop:FriendlyName="VENTA_ID" msprop:DbColumnName="VENTA_ID" msprop:design-time-name="7526ac4f-db2e-4d4c-a904-d432580947a1" type="xs:int" />
+                      <xs:element name="CLIENTE_ID" msprop:FriendlyName="CLIENTE_ID" msprop:DbColumnName="CLIENTE_ID" msprop:design-time-name="c42909b6-7c07-4f9b-8385-f1a4b348099d" type="xs:int" />
+                      <xs:element name="EMPLEADO_ID" msprop:FriendlyName="EMPLEADO_ID" msprop:DbColumnName="EMPLEADO_ID" msprop:design-time-name="2ff255fa-868b-48f9-9127-4c860b6f7356" type="xs:int" minOccurs="0" />
+                      <xs:element name="FECHA_ID" msprop:FriendlyName="FECHA_ID" msprop:DbColumnName="FECHA_ID" msprop:design-time-name="4c97d295-9f45-44df-b215-76427ec8d627" type="xs:int" />
+                      <xs:element name="TERRITORIO_ID" msprop:FriendlyName="TERRITORIO_ID" msprop:DbColumnName="TERRITORIO_ID" msprop:design-time-name="1701b458-4b1e-40c6-9e4e-d3d4af3c3ea3" type="xs:int" minOccurs="0" />
+                      <xs:element name="TOTAL_VENTA" msprop:FriendlyName="TOTAL_VENTA" msprop:DbColumnName="TOTAL_VENTA" msprop:design-time-name="ad4b95dd-3f96-4ace-badb-b8e9c1c52775" type="xs:int" />
+                      <xs:element name="CANTIDAD_PRODUCTOS" msprop:FriendlyName="CANTIDAD_PRODUCTOS" msprop:DbColumnName="CANTIDAD_PRODUCTOS" msprop:design-time-name="b51c0426-f68e-42c2-8d03-da075675f328" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimAlmacen" />
+              <xs:field xpath="ALMACEN_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimCategoria_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimCategoria" />
+              <xs:field xpath="CATEGORIA_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimCliente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimCliente" />
+              <xs:field xpath="CLIENTE_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimEmpleado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimEmpleado" />
+              <xs:field xpath="EMPLEADO_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimFecha_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimFecha" />
+              <xs:field xpath="FECHA_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimPais_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimPais" />
+              <xs:field xpath="PAIS_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimProducto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimProducto" />
+              <xs:field xpath="PRODUCTO_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DimTerritorio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DimTerritorio" />
+              <xs:field xpath="TERRITORIO_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_FactDetalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_FactDetalle" />
+              <xs:field xpath="ID_DETALLE" />
+            </xs:unique>
+            <xs:unique name="dbo_FactVenta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_FactVenta" />
+              <xs:field xpath="VENTA_ID" />
+            </xs:unique>
+            <xs:keyref name="FK_FactVenta_DimTerritorio" refer="dbo_DimTerritorio_Constraint1">
+              <xs:selector xpath=".//dbo_FactVenta" />
+              <xs:field xpath="TERRITORIO_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactVenta_DimCliente" refer="dbo_DimCliente_Constraint1">
+              <xs:selector xpath=".//dbo_FactVenta" />
+              <xs:field xpath="CLIENTE_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactVenta_DimFecha" refer="dbo_DimFecha_Constraint1">
+              <xs:selector xpath=".//dbo_FactVenta" />
+              <xs:field xpath="FECHA_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactVenta_DimEmpleado" refer="dbo_DimEmpleado_Constraint1">
+              <xs:selector xpath=".//dbo_FactVenta" />
+              <xs:field xpath="EMPLEADO_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactDetalle_DimProducto" refer="dbo_DimProducto_Constraint1">
+              <xs:selector xpath=".//dbo_FactDetalle" />
+              <xs:field xpath="PRODUCTO_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactDetalle_FactVenta" refer="dbo_FactVenta_Constraint1">
+              <xs:selector xpath=".//dbo_FactDetalle" />
+              <xs:field xpath="VENTA_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_DimTerritorio_DimPais" refer="dbo_DimPais_Constraint1">
+              <xs:selector xpath=".//dbo_DimTerritorio" />
+              <xs:field xpath="PAIS_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_DimProducto_DimCategoria" refer="dbo_DimCategoria_Constraint1">
+              <xs:selector xpath=".//dbo_DimProducto" />
+              <xs:field xpath="CATEGORIA_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_DimEmpleado_DimTerritorio" refer="dbo_DimTerritorio_Constraint1">
+              <xs:selector xpath=".//dbo_DimEmpleado" />
+              <xs:field xpath="TERRITORIO_ID" />
+            </xs:keyref>
+            <xs:keyref name="FK_DimAlmacen_DimTerritorio" refer="dbo_DimTerritorio_Constraint1">
+              <xs:selector xpath=".//dbo_DimAlmacen" />
+              <xs:field xpath="TERRITORIO_ID" />
+            </xs:keyref>
+          </xs:element>
+        </xs:schema>
+        <DW_x0020_Bike_x0020_Z xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>
